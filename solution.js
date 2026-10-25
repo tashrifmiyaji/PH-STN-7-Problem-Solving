@@ -15,7 +15,7 @@ var staircase = function (n) {
 
     return rows.join("\n");
 };
-console.log(staircase(4));
+console.log("problem-1 output: \n",staircase(4));
 
 
 // Problem 2: Grading Students
@@ -29,7 +29,7 @@ var gradingStudents = function (grades) {
         return nextMultiple - grade < 3 ? nextMultiple : grade;
     });
 };
-console.log(gradingStudents([73, 67, 38, 33]));
+console.log("problem-2 output: \n",gradingStudents([73, 67, 38, 33]));
 
 
 // Problem 3: Time Conversion
@@ -46,7 +46,6 @@ var timeConversion = function(s) {
 
   return `${String(hour).padStart(2, "0")}:${minutes}:${seconds}`;
 };
-console.log(timeConversion("07:05:45PM"));
-
+console.log("problem-3 output: \n", timeConversion("07:05:45PM"));
 
 
