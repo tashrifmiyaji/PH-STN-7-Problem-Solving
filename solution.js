@@ -103,3 +103,18 @@ var fizzBuzz = function(n) {
   return result;
 };
 console.log(fizzBuzz(10));
+
+
+// Problem 10: Running Sum of 1D Array
+var runningSum = function(nums) {
+  const result = [];
+  let total = 0;
+
+  for (const num of nums) {
+    total += num;
+    result.push(total);
+  }
+
+  return result;
+};
+console.log(runningSum([1, 2, 3, 4]));
