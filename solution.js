@@ -76,3 +76,9 @@ var summation = function(num) {
 };
 console.log(summation(10));
 
+
+// Problem 8: Convert a Boolean to a String
+var booleanToString = function(b) {
+  return String(b);
+};
+console.log(booleanToString(true));
