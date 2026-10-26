@@ -62,3 +62,9 @@ var solution = function(str) {
 };
 console.log(solution("tashrif"));
 
+
+// Problem 6: Sum of Positive
+var positiveSum = function(arr) {
+  return arr.reduce((sum, value) => sum + (value > 0 ? value : 0), 0);
+};
+console.log(positiveSum([1, -2, 3, -4, 8, -9]));
