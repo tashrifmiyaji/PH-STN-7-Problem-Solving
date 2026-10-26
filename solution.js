@@ -189,3 +189,32 @@ const moveZeroes = function (nums) {
 const nums = [0, 1, 0, 3, 12];
 moveZeroes(nums);
 console.log(nums);
+
+// Problem 15: Merge Sorted Array
+const merge = function (nums1, m, nums2, n) {
+    let i = m - 1;
+    let j = n - 1;
+    let writeIndex = m + n - 1;
+
+    while (j >= 0) {
+        if (i >= 0 && nums1[i] > nums2[j]) {
+            nums1[writeIndex] = nums1[i];
+            i--;
+        } else {
+            nums1[writeIndex] = nums2[j];
+            j--;
+        }
+
+        writeIndex--;
+    }
+};
+
+// Test
+const nums1 = [1, 2, 3, 0, 0, 0];
+const m = 3;
+const nums2 = [2, 5, 6];
+const n = 3;
+
+merge(nums1, m, nums2, n);
+
+console.log(nums1);
