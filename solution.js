@@ -68,3 +68,11 @@ var positiveSum = function(arr) {
   return arr.reduce((sum, value) => sum + (value > 0 ? value : 0), 0);
 };
 console.log(positiveSum([1, -2, 3, -4, 8, -9]));
+
+
+// Problem 7: Grasshopper — Summation
+var summation = function(num) {
+  return (num * (num + 1)) / 2;
+};
+console.log(summation(10));
+
