@@ -54,3 +54,11 @@ var repeatStr = function(n, s) {
   return s.repeat(n);
 };
 console.log("problem-4 output: \n", repeatStr(4, "tashrif "));
+
+
+// Problem 5: Reversed Strings
+var solution = function(str) {
+  return str.split("").reverse().join("");
+};
+console.log(solution("tashrif"));
+
