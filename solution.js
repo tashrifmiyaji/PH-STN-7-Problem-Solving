@@ -49,3 +49,8 @@ var timeConversion = function(s) {
 console.log("problem-3 output: \n", timeConversion("07:05:45PM"));
 
 
+// Problem 4: String Repeat
+var repeatStr = function(n, s) {
+  return s.repeat(n);
+};
+console.log("problem-4 output: \n", repeatStr(4, "tashrif "));
