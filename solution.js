@@ -270,3 +270,20 @@ var plusOne = function(digits) {
 console.log(plusOne([1, 2, 9]));
 
 
+
+// Problem 18: Reverse String
+const reverseString = function (s) {
+    let left = 0;
+    let right = s.length - 1;
+
+    while (left < right) {
+        [s[left], s[right]] = [s[right], s[left]];
+
+        left++;
+        right--;
+    }
+};
+
+const s1 = ["h", "e", "l", "l", "o"];
+reverseString(s1);
+console.log(s1);
