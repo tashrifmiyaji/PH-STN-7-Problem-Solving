@@ -133,3 +133,22 @@ var maximumWealth = function(accounts) {
 };
 console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]));
 
+
+
+// Problem 12: Remove Duplicates from Sorted Array
+var removeDuplicates = function(nums) {
+  if (nums.length === 0) return 0;
+
+  let writeIndex = 1;
+
+  for (let readIndex = 1; readIndex < nums.length; readIndex++) {
+    if (nums[readIndex] !== nums[writeIndex - 1]) {
+      nums[writeIndex] = nums[readIndex];
+      writeIndex++;
+    }
+  }
+
+  return writeIndex;
+};
+const duplicates = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+console.log(removeDuplicates(duplicates));
