@@ -287,3 +287,26 @@ const reverseString = function (s) {
 const s1 = ["h", "e", "l", "l", "o"];
 reverseString(s1);
 console.log(s1);
+
+
+
+// Problem 19: Length of Last Word
+const lengthOfLastWord = function (s) {
+    let index = s.length - 1;
+
+    // Skip trailing spaces
+    while (index >= 0 && s[index] === " ") {
+        index--;
+    }
+
+    let length = 0;
+
+    // Count characters in the last word
+    while (index >= 0 && s[index] !== " ") {
+        length++;
+        index--;
+    }
+
+    return length;
+};
+console.log(lengthOfLastWord("Hello World"));
