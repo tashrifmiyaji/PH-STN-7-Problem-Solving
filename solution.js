@@ -310,3 +310,47 @@ const lengthOfLastWord = function (s) {
     return length;
 };
 console.log(lengthOfLastWord("Hello World"));
+
+
+
+// Problem 20: Longest Common Prefix
+const longestCommonPrefix = function (strs) {
+    if (strs.length === 0) {
+        return "";
+    }
+
+    let prefix = strs[0];
+
+    for (let i = 1; i < strs.length; i++) {
+        while (!strs[i].startsWith(prefix)) {
+            prefix = prefix.slice(0, -1);
+
+            if (prefix === "") {
+                return "";
+            }
+        }
+    }
+
+    return prefix;
+};
+
+// Test 1
+console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+
+// Test 2
+console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+
+// Test 3
+console.log(
+    longestCommonPrefix([
+        "interspecies",
+        "interstellar",
+        "interstate"
+    ])
+);
+
+// Additional test
+console.log(longestCommonPrefix(["hello"]));
+
+// Additional test: one string is empty
+console.log(longestCommonPrefix(["abc", ""]));
