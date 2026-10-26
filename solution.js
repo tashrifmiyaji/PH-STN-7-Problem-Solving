@@ -6,7 +6,7 @@
  */
 
 // Problem 1: Staircase
-var staircase = function (n) {
+const staircase = function (n) {
     const rows = [];
 
     for (let i = 1; i <= n; i++) {
@@ -19,7 +19,7 @@ console.log("problem-1 output: \n",staircase(4));
 
 
 // Problem 2: Grading Students
-var gradingStudents = function (grades) {
+const gradingStudents = function (grades) {
     return grades.map((grade) => {
         if (grade < 38) {
             return grade;
@@ -33,7 +33,7 @@ console.log("problem-2 output: \n",gradingStudents([73, 67, 38, 33]));
 
 
 // Problem 3: Time Conversion
-var timeConversion = function(s) {
+const timeConversion = function(s) {
   const period = s.slice(-2);
   const [hourText, minutes, seconds] = s.slice(0, -2).split(":");
   let hour = Number(hourText);
@@ -50,42 +50,42 @@ console.log("problem-3 output: \n", timeConversion("07:05:45PM"));
 
 
 // Problem 4: String Repeat
-var repeatStr = function(n, s) {
+const repeatStr = function(n, s) {
   return s.repeat(n);
 };
 console.log("problem-4 output: \n", repeatStr(4, "tashrif "));
 
 
 // Problem 5: Reversed Strings
-var solution = function(str) {
+const solution = function(str) {
   return str.split("").reverse().join("");
 };
 console.log(solution("tashrif"));
 
 
 // Problem 6: Sum of Positive
-var positiveSum = function(arr) {
+const positiveSum = function(arr) {
   return arr.reduce((sum, value) => sum + (value > 0 ? value : 0), 0);
 };
 console.log(positiveSum([1, -2, 3, -4, 8, -9]));
 
 
 // Problem 7: Grasshopper — Summation
-var summation = function(num) {
+const summation = function(num) {
   return (num * (num + 1)) / 2;
 };
 console.log(summation(10));
 
 
 // Problem 8: Convert a Boolean to a String
-var booleanToString = function(b) {
+const booleanToString = function(b) {
   return String(b);
 };
 console.log(booleanToString(true));
 
 
 // Problem 9: Fizz Buzz
-var fizzBuzz = function(n) {
+const fizzBuzz = function(n) {
   const result = [];
 
   for (let i = 1; i <= n; i++) {
@@ -106,7 +106,7 @@ console.log(fizzBuzz(10));
 
 
 // Problem 10: Running Sum of 1D Array
-var runningSum = function(nums) {
+const runningSum = function(nums) {
   const result = [];
   let total = 0;
 
@@ -121,7 +121,7 @@ console.log(runningSum([1, 2, 3, 4]));
 
 
 // Problem 11: Richest Customer Wealth
-var maximumWealth = function(accounts) {
+const maximumWealth = function(accounts) {
   let maxWealth = 0;
 
   for (const account of accounts) {
@@ -136,7 +136,7 @@ console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]));
 
 
 // Problem 12: Remove Duplicates from Sorted Array
-var removeDuplicates = function(nums) {
+const removeDuplicates = function(nums) {
   if (nums.length === 0) return 0;
 
   let writeIndex = 1;
@@ -152,3 +152,19 @@ var removeDuplicates = function(nums) {
 };
 const duplicates = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 console.log(removeDuplicates(duplicates));
+
+
+// Problem 13: Contains Duplicate
+const containsDuplicate = function(nums) {
+  const seen = new Set();
+
+  for (const num of nums) {
+    if (seen.has(num)) return true;
+    seen.add(num);
+  }
+
+  return false;
+};
+console.log(containsDuplicate([1, 2, 3, 1]));
+
+
