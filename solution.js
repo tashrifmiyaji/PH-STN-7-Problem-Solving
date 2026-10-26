@@ -118,3 +118,18 @@ var runningSum = function(nums) {
   return result;
 };
 console.log(runningSum([1, 2, 3, 4]));
+
+
+// Problem 11: Richest Customer Wealth
+var maximumWealth = function(accounts) {
+  let maxWealth = 0;
+
+  for (const account of accounts) {
+    const wealth = account.reduce((sum, amount) => sum + amount, 0);
+    maxWealth = Math.max(maxWealth, wealth);
+  }
+
+  return maxWealth;
+};
+console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]));
+
